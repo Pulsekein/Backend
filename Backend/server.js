@@ -76,5 +76,5 @@ app.post('/api/checkout', (req, res) => {
     if (success) res.json({ message: 'Payment successful!' });
     else res.json({ message: 'Payment failed.' });
 });
-
-app.listen(5000, () => console.log('Server running on port 5000'));
+const PORT=5000 || process.env.PORT;
+app.listen(PORT, () => console.log('Server running on port 5000'));
